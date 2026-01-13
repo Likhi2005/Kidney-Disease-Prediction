@@ -29,7 +29,7 @@ cd Kidney-Disease-Prediction
 ```
 
 ```bash
-conda create -n kidneyCnn python=3.8 -y
+conda create -n kidneyCnn python=3.10.19 -y
 ```
 
 ```bash

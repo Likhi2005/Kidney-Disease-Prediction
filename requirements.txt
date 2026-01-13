@@ -17,3 +17,4 @@ Flask
 Flask-Cors
 gdown
 -e .
+ipykernel==6.29.0
