@@ -14,6 +14,29 @@
 9. Update the dvc.yaml
 10. app.py
 
+## DVC Pipeline
+
+View the pipeline dependency graph:
+
+```bash
+dvc dag
+
++----------------+            +--------------------+
+| data_ingestion |            | prepare_base_model |
++----------------+*****       +--------------------+
+         *             *****             *
+         *                  ******       *
+         *                        ***    *
+         **                        +----------+
+           **                      | training |
+             ***                   +----------+
+                ***             ***
+                   **         **
+                     **     **
+                  +------------+
+                  | evaluation |
+                  +------------+
+
 # How to run?
 ### STEPS:
 
