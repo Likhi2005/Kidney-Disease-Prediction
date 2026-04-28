@@ -10,41 +10,41 @@ from cnnClassifier.pipeline.stage_04_model_evaluation import ModelEvaluationPipe
 
 
 
-# STAGE_NAME = "Data Ingestion Stage"
-# try:
-#     logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
-#     obj = DataIngestionTrainingPipeline()
-#     obj.main()
-#     logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
-# except Exception as e:
-#     logger.exception(f"error in stage {STAGE_NAME}: {e}")
-#     raise e
+STAGE_NAME = "Data Ingestion Stage"
+try:
+    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+    obj = DataIngestionTrainingPipeline()
+    obj.main()
+    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+    logger.exception(f"error in stage {STAGE_NAME}: {e}")
+    raise e
 
 
 
 
-# STAGE_NAME = "Prepare Base Model Stage"
-# try:
-#     logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
-#     obj = PrepareBaseModelTrainingPipeline()
-#     obj.main()
-#     logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
-# except Exception as e:
-#     logger.exception(f"error in stage {STAGE_NAME}: {e}")
-#     raise e
+STAGE_NAME = "Prepare Base Model Stage"
+try:
+    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+    obj = PrepareBaseModelTrainingPipeline()
+    obj.main()
+    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+    logger.exception(f"error in stage {STAGE_NAME}: {e}")
+    raise e
 
 
 
 
-# STAGE_NAME = "Model Training Stage"
-# try:
-#     logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
-#     obj = ModelTrainingPipeline()
-#     obj.main()
-#     logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
-# except Exception as e:
-#     logger.exception(f"error in stage {STAGE_NAME}: {e}")
-#     raise e
+STAGE_NAME = "Model Training Stage"
+try:
+    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+    obj = ModelTrainingPipeline()
+    obj.main()
+    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+    logger.exception(f"error in stage {STAGE_NAME}: {e}")
+    raise e
 
 
 

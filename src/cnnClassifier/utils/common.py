@@ -99,7 +99,7 @@ def save_bin(data: Any,path: Path):
         path (Path): path to binary file
     """
     
-    joblib.dump(value=data,filname=path)
+    joblib.dump(value=data,filename=path)
     logger.info(f"binary file saved at: {path}")
     
     

@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+from pathlib import Path
 from cnnClassifier.constants import *
 from cnnClassifier.utils.common import read_yaml, create_directories
 from cnnClassifier.entity.config_entity import (DataIngestionConfig, PrepareBaseModelConfig, TrainingConfig, EvaluationConfig)
