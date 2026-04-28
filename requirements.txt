@@ -18,3 +18,8 @@ Flask-Cors
 gdown
 -e .
 ipykernel==6.29.0
+
+setuptools==68.2.2
+wheel
+
+python-dotenv

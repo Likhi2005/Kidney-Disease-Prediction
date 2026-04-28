@@ -161,3 +161,8 @@ cython_debug/
 
 artifacts/*
 artifacts/
+mlruns/
+mlruns/*
+logs/
+logs/*
+scores.json

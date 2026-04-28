@@ -1,8 +1,10 @@
+
+
 artifacts_root: artifacts
 
 data_ingestion:
   root_dir: artifacts/data_ingestion
-  source_URL: "https://drive.google.com/file/d/1WqOq9gp-ZC2nY9QcoqTtfpCDn48Vr1o5/view?usp=sharing"
+  source_URL: null
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
 
@@ -15,3 +17,4 @@ prepare_base_model:
 training:
   root_dir: artifacts/training
   trained_model_path: artifacts/training/model.h5
+
