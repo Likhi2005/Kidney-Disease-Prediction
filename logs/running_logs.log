@@ -74,3 +74,11 @@ x==========x]
 [2026-05-01 18:53:52,884: INFO: stage_03_model_training: >>>>>> stage Model Training Stage completed <<<<<<
 
 x==========x]
+[2026-05-01 18:57:02,491: INFO: stage_04_model_evaluation: >>>>>> stage Model Evaluation with MLflow started <<<<<<]
+[2026-05-01 18:57:02,496: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-01 18:57:02,499: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-01 18:57:02,501: INFO: common: created directory at: artifacts]
+[2026-05-01 19:12:02,466: INFO: common: json file saved at: scores.json]
+[2026-05-01 19:12:02,467: INFO: stage_04_model_evaluation: >>>>>> stage Model Evaluation with MLflow completed <<<<<<
+
+x==========x]
