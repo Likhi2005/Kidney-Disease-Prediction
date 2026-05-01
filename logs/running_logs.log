@@ -66,3 +66,11 @@ x==========x]
 [2026-05-01 18:00:31,125: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare Base Model Stage completed <<<<<<
 
 x==========x]
+[2026-05-01 18:00:51,219: INFO: stage_03_model_training: >>>>>> stage Model Training Stage started <<<<<<]
+[2026-05-01 18:00:51,227: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-01 18:00:51,233: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-01 18:00:51,235: INFO: common: created directory at: artifacts]
+[2026-05-01 18:00:51,238: INFO: common: created directory at: artifacts/training]
+[2026-05-01 18:53:52,884: INFO: stage_03_model_training: >>>>>> stage Model Training Stage completed <<<<<<
+
+x==========x]
