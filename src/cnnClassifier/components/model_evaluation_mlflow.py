@@ -82,5 +82,6 @@ class Evaluation:
                 # https://www.mlflow.org/docs/latest/ml/model-registry/
                 mlflow.tensorflow.log_model(self.model,"model",registered_model_name="VGG16Model")
             else:
-                mlflow.tensorflow.log_model(self.model,"model")
+                raise Exception("Since MLflow is running in local file mode, model registry is not supported. Please switch to a different tracking store (e.g. SQLAlchemy compatible database or remote server) to use the model registry functionality.")
+                # mlflow.tensorflow.log_model(self.model,"model")
     

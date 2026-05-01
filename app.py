@@ -44,8 +44,9 @@ def predictRoute():
     result = clApp.classifier.predict()
     return jsonify(result)
 
+clApp = ClientApp()
+
 if __name__ == '__main__':
-    clApp = ClientApp()
-    # app.run(host='0.0.0.0', port=80) # local host
+    app.run(host='0.0.0.0', debug=True, port=80) # local host
     # app.run(host='0.0.0.0', port=8080) # for AWS
-    app.run(host='0.0.0.0', port=80) # For AZURE
+    # app.run(host='0.0.0.0', port=80) # For AZURE
