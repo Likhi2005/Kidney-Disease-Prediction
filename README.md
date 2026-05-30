@@ -1,5 +1,12 @@
 # Kidney-Disease-Classification-MLflow-DVC
 
+## 🚀 Live Demo
+
+The application is deployed on AWS EC2 using Docker + GitHub Actions CI/CD:
+
+👉 http://3.90.46.236:8080/
+
+> Note: This is a development deployment and may change if the EC2 instance is restarted.
 
 ## Workflows
 
