@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+
+{% block title %}About - Kidney Disease Prediction Project{% endblock %}
+
+{% block content %}
+<div class="container-lg py-5">
+    <!-- Project Overview -->
+    <section class="mb-5">
+        <h1 class="display-5 fw-bold mb-4">Kidney Disease Prediction System</h1>
+        
+        <div class="card border-0 mb-4" style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2);">
+            <div class="card-body p-5">
+                <h3 class="fw-bold mb-3">Application Overview</h3>
+                <p class="mb-0">This is a machine learning application that demonstrates kidney disease prediction through deep learning analysis of medical imaging. The system processes medical images using convolutional neural networks to identify patterns associated with kidney disease, showcasing practical AI deployment in healthcare imaging analysis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Objectives -->
+    <section class="mb-5">
+        <h2 class="fw-bold mb-4">Technical Implementation</h2>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="card border-0 h-100" style="background: rgba(0, 212, 255, 0.05); border-left: 4px solid #00d4ff;">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-2">Machine Learning Pipeline</h5>
+                        <p class="text-white-50 mb-0">End-to-end implementation from data processing through model training and inference</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0 h-100" style="background: rgba(0, 212, 255, 0.05); border-left: 4px solid #00d4ff;">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-2">Full-Stack Development</h5>
+                        <p class="text-white-50 mb-0">Complete application stack from web frontend through ML backend to cloud infrastructure</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0 h-100" style="background: rgba(0, 212, 255, 0.05); border-left: 4px solid #00d4ff;">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-2">DevOps & Cloud Infrastructure</h5>
+                        <p class="text-white-50 mb-0">Docker containerization, CI/CD automation, and AWS deployment practices</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0 h-100" style="background: rgba(0, 212, 255, 0.05); border-left: 4px solid #00d4ff;">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-2">Production Deployment</h5>
+                        <p class="text-white-50 mb-0">Scalable architecture with monitoring, logging, and performance optimization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="mb-5">
+        <h2 class="fw-bold mb-4">System Architecture</h2>
+        
+        <div class="row g-3 mb-4">
+            <div class="col-md-6">
+                <div class="card border-0" style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2);">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-3">Frontend Layer</h5>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Flask Web Framework</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Bootstrap 5 & Modern UI</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Drag-and-drop Image Upload</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Real-time Results Display</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0" style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2);">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-3">Backend Layer</h5>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check-circle text-success me-2"></i> TensorFlow/Keras CNN Model</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Image Preprocessing Pipeline</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Model Prediction Engine</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Error Handling & Logging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0" style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2);">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-3">Deployment Layer</h5>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Docker Containerization</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> AWS ECR (Elastic Container Registry)</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> EC2 Instance Hosting</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Load Balancing & Scaling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0" style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2);">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-3">CI/CD Pipeline</h5>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-check-circle text-success me-2"></i> GitHub Actions Automation</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Automated Testing</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Docker Image Build & Push</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Automated Deployment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Improvements -->
+    <section class="mb-5">
+        <h2 class="fw-bold mb-4">Future Improvements</h2>
+        
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="card border-0" style="background: rgba(255, 193, 7, 0.1); border: 1px solid rgba(255, 193, 7, 0.3);">
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">Model Enhancement</h6>
+                        <ul class="list-unstyled small text-white-50">
+                            <li>• Ensemble methods</li>
+                            <li>• Transfer learning with larger datasets</li>
+                            <li>• Multi-class classification</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0" style="background: rgba(255, 193, 7, 0.1); border: 1px solid rgba(255, 193, 7, 0.3);">
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">Feature Additions</h6>
+                        <ul class="list-unstyled small text-white-50">
+                            <li>• User authentication</li>
+                            <li>• Prediction history</li>
+                            <li>• Batch processing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0" style="background: rgba(255, 193, 7, 0.1); border: 1px solid rgba(255, 193, 7, 0.3);">
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-2">Infrastructure</h6>
+                        <ul class="list-unstyled small text-white-50">
+                            <li>• Kubernetes orchestration</li>
+                            <li>• Database integration</li>
+                            <li>• API versioning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="mb-5">
+        <h2 class="fw-bold mb-4">Key Features</h2>
+        
+        <div class="list-group border-0">
+            <div class="list-group-item border-0 p-3 mb-2" style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 8px;">
+                <h6 class="fw-bold mb-1">Real-time Image Analysis</h6>
+                <p class="text-white-50 small mb-0">Upload images and receive instant ML-based predictions with confidence scores</p>
+            </div>
+            <div class="list-group-item border-0 p-3 mb-2" style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 8px;">
+                <h6 class="fw-bold mb-1">Modern Web Interface</h6>
+                <p class="text-white-50 small mb-0">Glassmorphism design with smooth animations and responsive layout</p>
+            </div>
+            <div class="list-group-item border-0 p-3 mb-2" style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 8px;">
+                <h6 class="fw-bold mb-1">Cloud Deployment</h6>
+                <p class="text-white-50 small mb-0">Containerized with Docker and deployed on AWS for scalability</p>
+            </div>
+            <div class="list-group-item border-0 p-3 mb-2" style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 8px;">
+                <h6 class="fw-bold mb-1">Automated CI/CD</h6>
+                <p class="text-white-50 small mb-0">GitHub Actions workflows for testing and automated deployment</p>
+            </div>
+            <div class="list-group-item border-0 p-3" style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 8px;">
+                <h6 class="fw-bold mb-1">Comprehensive Documentation</h6>
+                <p class="text-white-50 small mb-0">Detailed documentation with model architecture and deployment guide</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team & Credits -->
+    <section class="mb-5">
+        <h2 class="fw-bold mb-4">Project Information</h2>
+        <div class="card border-0" style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2);">
+            <div class="card-body p-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="fw-bold mb-2">Repository</h6>
+                        <p><a href="https://github.com/Likhi2005/Kidney-Disease-Prediction" target="_blank" class="text-decoration-none" style="color: #00d4ff;">
+                            <i class="fab fa-github me-2"></i>View on GitHub
+                        </a></p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold mb-2">Purpose</h6>
+                        <p class="text-white-50">Academic final-year project for B.Tech Computer Science</p>
+                    </div>
+                </div>
+                <hr style="border-color: rgba(255, 255, 255, 0.1);">
+                <p class="text-white-50 small mb-0">
+                    <strong>Disclaimer:</strong> This is an educational project for learning purposes. The predictions generated by the model should not be used for actual medical diagnosis. Always consult qualified healthcare professionals for medical concerns.
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

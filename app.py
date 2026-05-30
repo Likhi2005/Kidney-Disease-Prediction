@@ -24,8 +24,20 @@ class ClientApp:
 def home():
     return render_template('index.html')
 
+@app.route('/prediction', methods=['GET'])
+@cross_origin()
+def prediction():
+    return render_template('prediction.html')
 
+@app.route('/documentation', methods=['GET'])
+@cross_origin()
+def documentation():
+    return render_template('documentation.html')
 
+@app.route('/about', methods=['GET'])
+@cross_origin()
+def about():
+    return render_template('about.html')
 
 @app.route("/train", methods=['POST'])
 @cross_origin()
@@ -47,6 +59,6 @@ def predictRoute():
 clApp = ClientApp()
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, port=80) # local host
-    # app.run(host='0.0.0.0', port=8080) # for AWS
+    # app.run(host='0.0.0.0', debug=True, port=80) # local host
+    app.run(host='0.0.0.0', port=8080) # for AWS
     # app.run(host='0.0.0.0', port=80) # For AZURE

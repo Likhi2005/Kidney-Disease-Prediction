@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}Prediction - Kidney Disease Analysis{% endblock %}
+
+{% block content %}
+<div class="container-lg py-5">
+    <!-- Header -->
+    <div class="mb-5">
+        <h1 class="display-5 fw-bold mb-3">AI Medical Image Analysis</h1>
+        <p class="fs-5 text-white-50">Upload medical images for analysis using convolutional neural networks trained on kidney disease detection patterns.</p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Upload Section -->
+        <div class="col-lg-6">
+            <div class="card border-0 h-100" style="background: rgba(0, 212, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(0, 212, 255, 0.2);">
+                <div class="card-body p-4">
+                    <h4 class="fw-bold mb-4">
+                        <i class="fas fa-cloud-upload-alt me-2" style="color: #00d4ff;"></i> Upload Image
+                    </h4>
+
+                    <!-- Drag and Drop Area -->
+                    <div id="dropZone" class="p-5 text-center rounded" style="border: 2px dashed rgba(0, 212, 255, 0.4); background: rgba(0, 212, 255, 0.02); cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='#00d4ff'; this.style.background='rgba(0, 212, 255, 0.05)'" onmouseout="this.style.borderColor='rgba(0, 212, 255, 0.4)'; this.style.background='rgba(0, 212, 255, 0.02)'">
+                        <i class="fas fa-image fa-3x mb-3" style="color: #00d4ff; opacity: 0.7;"></i>
+                        <p class="fw-bold mb-2">Drag & Drop Image Here</p>
+                        <p class="text-white-50 small">or click to browse</p>
+                        <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                    </div>
+
+                    <p class="text-white-50 small mt-3 mb-4">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Supported: JPG, PNG, GIF • Max size: 5MB
+                    </p>
+
+                    <!-- Image Preview -->
+                    <div id="previewContainer" style="display: none;">
+                        <div class="rounded mb-3" style="background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2); overflow: hidden;">
+                            <img id="previewImage" src="" alt="Preview" style="width: 100%; max-height: 300px; object-fit: contain;">
+                        </div>
+                        <p class="text-white-50 small text-center"><span id="fileName"></span></p>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="d-grid gap-2 mt-4">
+                        <button id="predictBtn" type="button" class="btn btn-lg" style="background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%); color: white; border: none; font-weight: 600;" disabled>
+                            <i class="fas fa-wand-magic-sparkles me-2"></i> Analyze Image
+                        </button>
+                        <button id="clearBtn" type="button" class="btn btn-lg btn-outline-secondary" style="display: none;">
+                            <i class="fas fa-redo me-2"></i> Upload Different Image
+                        </button>
+                    </div>
+
+                    <!-- Loading Spinner -->
+                    <div id="loadingSpinner" style="display: none;" class="text-center mt-4">
+                        <div class="spinner-border mb-3" style="color: #00d4ff;" role="status">
+                            <span class="visually-hidden">Analyzing...</span>
+                        </div>
+                        <p class="text-white-50 fw-500">Processing your image...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="col-lg-6">
+            <div class="card border-0 h-100" style="background: rgba(0, 212, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(0, 212, 255, 0.2);">
+                <div class="card-body p-4">
+                    <h4 class="fw-bold mb-4">
+                        <i class="fas fa-chart-line me-2" style="color: #00d4ff;"></i> Prediction Results
+                    </h4>
+
+                    <!-- No Results State -->
+                    <div id="noResultsState" class="text-center py-5">
+                        <i class="fas fa-inbox fa-3x mb-3" style="color: rgba(0, 212, 255, 0.3);"></i>
+                        <p class="text-white-50">Upload an image to see prediction results here</p>
+                    </div>
+
+                    <!-- Results Display -->
+                    <div id="resultsState" style="display: none;">
+                        <!-- Classification Card -->
+                        <div class="card border-0 mb-3" style="background: rgba(0, 212, 255, 0.1); border-left: 4px solid #00d4ff;">
+                            <div class="card-body">
+                                <small class="text-white-50 fw-bold">CLASSIFICATION</small>
+                                <p class="fs-4 fw-bold mb-0" id="classificationResult">-</p>
+                            </div>
+                        </div>
+
+                        <!-- Confidence Score -->
+                        <div class="mb-4">
+                            <label class="small fw-bold text-white-50 mb-2">CONFIDENCE SCORE</label>
+                            <div class="progress" style="height: 28px; background: rgba(0, 212, 255, 0.1); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 6px;">
+                                <div id="confidenceBar" class="progress-bar" role="progressbar" style="background: linear-gradient(90deg, #00d4ff 0%, #0099ff 100%); width: 0%;">
+                                    <span id="confidenceText" class="fw-bold" style="font-size: 0.85rem;">0%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Detailed Metrics -->
+                        <div class="mb-4">
+                            <label class="small fw-bold text-white-50 mb-2">MODEL DETAILS</label>
+                            <div id="metricsTable" class="small">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Disclaimer Alert -->
+                        <div class="alert alert-warning border-0" style="background: rgba(255, 193, 7, 0.1); border-left: 4px solid #ffc107;">
+                            <small>
+                                <i class="fas fa-exclamation-triangle me-2"></i>
+                                <strong>Disclaimer:</strong> AI predictions are generated by machine learning models and should not be used as a substitute for professional medical diagnosis. Always consult qualified healthcare providers.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Form Elements -->
+    <input type="hidden" id="url" value="/predict">
+    <canvas id="canvas" style="display: none;"></canvas>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/prediction.js') }}"></script>
+{% endblock %}
